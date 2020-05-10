@@ -48,6 +48,7 @@ const Form = () => {
             Link
             <Input
               id="link"
+              type="url"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="https://www.google.com"
