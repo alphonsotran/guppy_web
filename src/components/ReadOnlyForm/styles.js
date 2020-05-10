@@ -38,3 +38,11 @@ export const Button = styled.button`
 export const Label = styled.label`
   font-weight: 700;
 `;
+
+export const ButtonWrap = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-content: center;
+`;

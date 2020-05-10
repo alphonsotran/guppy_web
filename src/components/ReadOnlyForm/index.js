@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Input, ReadOnlyWrapper, Button, Label } from './styles';
+import { Input, ReadOnlyWrapper, Button, Label, ButtonWrap } from './styles';
 
 const ReadOnlyForm = ({ value, status }) => {
   const copyToClipboard = (e) => {
@@ -19,7 +19,9 @@ const ReadOnlyForm = ({ value, status }) => {
           Guppy URL
           <Input value={value} readOnly />
         </Label>
-        <Button>Copy</Button>
+        <ButtonWrap>
+          <Button>Copy</Button>
+        </ButtonWrap>
       </form>
     </ReadOnlyWrapper>
   );
