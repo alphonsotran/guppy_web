@@ -1,12 +1,14 @@
 import React from 'react';
-import './App.css';
 import Form from './components/Form';
+
+import { AppWrapper, Header } from './styles';
 
 function App() {
   return (
-    <div className="App">
+    <AppWrapper>
+      <Header>Guppy: A Url Shortener</Header>
       <Form />
-    </div>
+    </AppWrapper>
   );
 }
 
