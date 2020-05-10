@@ -3,6 +3,15 @@ import axios from 'axios';
 
 import ReadOnlyForm from '../ReadOnlyForm';
 
+import {
+  Input,
+  Container,
+  FormWrapper,
+  Button,
+  InputForm,
+  Label,
+} from './styles';
+
 const Form = () => {
   const [input, setInput] = useState('');
   const [guppyUrl, setGuppyUrl] = useState('');
@@ -13,7 +22,6 @@ const Form = () => {
     setResponseStatus(false);
     try {
       const {
-        status,
         data: { guppy_url },
       } = await axios({
         url: `http://localhost:5000/links`,
@@ -33,22 +41,24 @@ const Form = () => {
   };
 
   return (
-    <div className="">
-      <form onSubmit={registerLink}>
-        <label htmlFor="link">
-          Link
-          <input
-            id="link"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="https://www.google.com"
-          />
-        </label>
-        <button>Submit</button>
-      </form>
+    <Container className="">
+      <FormWrapper>
+        <InputForm onSubmit={registerLink}>
+          <Label htmlFor="link">
+            Link
+            <Input
+              id="link"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="https://www.google.com"
+            />
+          </Label>
+          <Button>Submit</Button>
+        </InputForm>
+      </FormWrapper>
 
       <ReadOnlyForm value={guppyUrl} status={responseStatus} />
-    </div>
+    </Container>
   );
 };
 
