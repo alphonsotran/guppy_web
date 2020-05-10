@@ -6,7 +6,7 @@ import { AppWrapper, Header } from './styles';
 function App() {
   return (
     <AppWrapper>
-      <Header>Guppy: A Url Shortener</Header>
+      <Header>Guppy: A Url Shortener 🐟</Header>
       <Form />
     </AppWrapper>
   );
