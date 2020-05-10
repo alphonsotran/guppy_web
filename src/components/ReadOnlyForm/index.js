@@ -15,7 +15,7 @@ const ReadOnlyForm = ({ value, status }) => {
   return (
     <ReadOnlyWrapper>
       <form onSubmit={copyToClipboard}>
-        <Label htmlFor="link">
+        <Label>
           Guppy URL
           <Input value={value} readOnly />
         </Label>
