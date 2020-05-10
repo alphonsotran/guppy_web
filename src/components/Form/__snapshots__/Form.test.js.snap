@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expects to render Form component 1`] = `
+<styled.div
+  className=""
+>
+  <styled.div>
+    <styled.form
+      onSubmit={[Function]}
+    >
+      <styled.label
+        htmlFor="link"
+      >
+        Link
+        <styled.input
+          id="link"
+          onChange={[Function]}
+          placeholder="https://www.google.com"
+          value=""
+        />
+      </styled.label>
+      <styled.button>
+        Submit
+      </styled.button>
+    </styled.form>
+  </styled.div>
+  <ReadOnlyForm
+    status={false}
+    value=""
+  />
+</styled.div>
+`;
