@@ -10,16 +10,21 @@ import {
   Button,
   InputForm,
   Label,
+  ErrorText,
+  ErrorAndButtonWrap,
 } from './styles';
 
 const Form = () => {
   const [input, setInput] = useState('');
   const [guppyUrl, setGuppyUrl] = useState('');
   const [responseStatus, setResponseStatus] = useState(false);
+  const [errorValue, setErrorValue] = useState('');
 
   const registerLink = async (e) => {
     e.preventDefault();
     setResponseStatus(false);
+    setErrorValue('');
+
     try {
       const {
         data: { guppy_url },
@@ -36,7 +41,7 @@ const Form = () => {
       setGuppyUrl(guppy_url);
       setResponseStatus(true);
     } catch (error) {
-      console.log('Please try again.', error);
+      setErrorValue('Please try again.');
     }
   };
 
@@ -54,7 +59,10 @@ const Form = () => {
               placeholder="https://www.google.com"
             />
           </Label>
-          <Button>Submit</Button>
+          <ErrorAndButtonWrap>
+            <Button>Submit</Button>
+            {errorValue && <ErrorText>{errorValue}</ErrorText>}
+          </ErrorAndButtonWrap>
         </InputForm>
       </FormWrapper>
 

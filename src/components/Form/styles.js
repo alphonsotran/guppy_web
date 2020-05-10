@@ -15,15 +15,15 @@ export const Container = styled.div`
 `;
 
 export const Input = styled.input`
-  border: 0;
   border-bottom: 1px solid black;
+  border: 0;
   display: block;
   font-family: Brand, sans-serif;
   font-size: 1rem;
-  margin: 0;
-  width: 18rem;
-  padding: 0.5rem;
   margin-top: 0.5rem;
+  margin: 0;
+  padding: 0.5rem;
+  width: 18rem;
 
   ::placeholder {
     color: 'gray';
@@ -35,10 +35,10 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  margin-top: 1rem;
-  border: 1px solid black;
-  border-radius: 1rem;
   background-color: lightgray;
+  border-radius: 1rem;
+  border: 1px solid black;
+  margin-top: 1rem;
   margin-top: 1rem;
   padding: 0.8rem;
 `;
@@ -49,4 +49,17 @@ export const InputForm = styled.form`
 
 export const Label = styled.label`
   font-weight: 700;
+`;
+
+export const ErrorText = styled.p`
+  color: red;
+  font-weight: 500;
+`;
+
+export const ErrorAndButtonWrap = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-content: center;
 `;
