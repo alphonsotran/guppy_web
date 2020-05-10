@@ -15,13 +15,11 @@ export const Container = styled.div`
 `;
 
 export const Input = styled.input`
-  border-bottom: 1px solid black;
   border: 0;
   display: block;
   font-family: Brand, sans-serif;
   font-size: 1rem;
   margin-top: 0.5rem;
-  margin: 0;
   padding: 0.5rem;
   width: 18rem;
 

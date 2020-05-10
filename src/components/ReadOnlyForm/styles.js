@@ -2,7 +2,6 @@ import styled, { css } from 'styled-components';
 
 export const Input = styled.input`
   border: 0;
-  border-bottom: 1px solid black;
   display: block;
   font-family: Brand, sans-serif;
   font-size: 1rem;
