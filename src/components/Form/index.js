@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+import ReadOnlyForm from '../ReadOnlyForm';
+
 const Form = () => {
   const [input, setInput] = useState('');
   const [guppyUrl, setGuppyUrl] = useState('');
@@ -30,14 +32,6 @@ const Form = () => {
     }
   };
 
-  const readOnlyForm = () => {
-    if (!responseStatus) {
-      return null;
-    }
-
-    return <input id="guppy_link" value={guppyUrl} readOnly />;
-  };
-
   return (
     <div className="">
       <form onSubmit={registerLink}>
@@ -53,7 +47,7 @@ const Form = () => {
         <button>Submit</button>
       </form>
 
-      {readOnlyForm()}
+      <ReadOnlyForm value={guppyUrl} status={responseStatus} />
     </div>
   );
 };
