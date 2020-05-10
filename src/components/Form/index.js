@@ -3,6 +3,8 @@ import axios from 'axios';
 
 const Form = () => {
   const [input, setInput] = useState('');
+  const [guppyUrl, setGuppyUrl] = useState('');
+  const [responseStatus, setResponseStatus] = useState(false);
 
   const registerLink = async (e) => {
     e.preventDefault();
@@ -28,6 +30,14 @@ const Form = () => {
     }
   };
 
+  const readOnlyForm = () => {
+    if (!responseStatus) {
+      return null;
+    }
+
+    return <input id="guppy_link" value={guppyUrl} readOnly />;
+  };
+
   return (
     <div className="">
       <form onSubmit={registerLink}>
@@ -42,6 +52,8 @@ const Form = () => {
         </label>
         <button>Submit</button>
       </form>
+
+      {readOnlyForm()}
     </div>
   );
 };
