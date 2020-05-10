@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Input, ReadOnlyWrapper, Button, Label } from './styles';
+
 const ReadOnlyForm = ({ value, status }) => {
   const copyToClipboard = (e) => {
     e.preventDefault();
@@ -11,10 +13,15 @@ const ReadOnlyForm = ({ value, status }) => {
   }
 
   return (
-    <form onSubmit={copyToClipboard}>
-      <input id="guppy_link" value={value} readOnly />
-      <button>Copy</button>
-    </form>
+    <ReadOnlyWrapper>
+      <form onSubmit={copyToClipboard}>
+        <Label htmlFor="link">
+          Guppy URL
+          <Input value={value} readOnly />
+        </Label>
+        <Button>Copy</Button>
+      </form>
+    </ReadOnlyWrapper>
   );
 };
 
