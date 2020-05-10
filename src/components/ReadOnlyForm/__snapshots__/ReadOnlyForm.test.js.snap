@@ -12,9 +12,11 @@ exports[`expects to render ReadOnlyForm component 1`] = `
         value="https://localhost:5000/kdfjq2"
       />
     </styled.label>
-    <styled.button>
-      Copy
-    </styled.button>
+    <styled.div>
+      <styled.button>
+        Copy
+      </styled.button>
+    </styled.div>
   </form>
 </styled.div>
 `;

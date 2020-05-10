@@ -3,7 +3,7 @@
 exports[`expects to render App component 1`] = `
 <styled.div>
   <styled.h1>
-    Guppy: A Url Shortener
+    Guppy: A Url Shortener 🐟
   </styled.h1>
   <Form />
 </styled.div>

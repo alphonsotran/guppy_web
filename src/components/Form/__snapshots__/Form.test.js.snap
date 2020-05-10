@@ -16,12 +16,15 @@ exports[`expects to render Form component 1`] = `
           id="link"
           onChange={[Function]}
           placeholder="https://www.google.com"
+          type="url"
           value=""
         />
       </styled.label>
-      <styled.button>
-        Submit
-      </styled.button>
+      <styled.div>
+        <styled.button>
+          Submit
+        </styled.button>
+      </styled.div>
     </styled.form>
   </styled.div>
   <ReadOnlyForm
